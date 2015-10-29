@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
 	<data>
-		<record id="view_partner_form" model="ir.ui.view">
+		<!-- <record id="view_partner_form" model="ir.ui.view">
 			<field name="name">res.partner.form.inherit</field>
 			<field name="model">res.partner</field>
 			<field name="inherit_id" ref="membership.view_partner_form"/>
 			<field name="arch" type="xml">
 				<field name="category_id" position="after">
 
-						<label string="Memberships"/> 
+						 <label string="Memberships" for="member_memberships"/> 
+						<field name="member_memberships" widget="many2many_tags"/>  
 				</field>
 			</field>
+        </record> -->
+
+        <record model="ir.ui.view" id="membership_members_tree">
+            <field name="name">Members</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="membership.membership_members_tree"/>
+            <field name="arch" type="xml">
+                <field name="membership_state" position="after">
+                	<field name="member_membership" />
+            	</field>
+            </field>
         </record>
+
 	</data>
 </openerp>

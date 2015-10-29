@@ -19,3 +19,35 @@
 #
 ##############################################################################
 
+from openerp import api, fields, models
+
+class MembershipModifications(models.Model):
+	
+	_inherit = 'res.partner'
+
+	# member_memberships = fields.Many2many('membership_membership_line')
+	
+	# member_memberships = fields.Many2many(
+	# 	'membership.membership_line',
+	# 	column1='id',
+	# 	column2='partner',
+	# 	string='Members memberships'
+	# )
+
+	member_membership = fields.Char('Memberships', compute='compute_member_membership')
+
+	@api.one
+	def compute_member_membership(self):
+		
+
+		lines = self.member_lines
+		membership = ""
+
+		for i in range(0, len(lines)):
+
+			membership += lines[i].membership_id.name
+			
+			if i + 1 < len(lines):
+				membership += ", "
+
+		self.member_membership = membership

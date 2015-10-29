@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-====================
+========================
 Membership modifications
-====================
+========================
 
 This module was written to extend the functionality of membership module to keep track of members membership products.
 
