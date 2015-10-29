@@ -25,24 +25,25 @@ class MembershipModifications(models.Model):
 	
 	_inherit = 'res.partner'
 
-	member_membership = fields.Char('Memberships', compute='compute_member_membership')
-	
+	member_membership = fields.Char('Memberships', compute='compute_member_membership')	
 
 	@api.one
 	def compute_member_membership(self):
 		
-
 		lines = self.member_lines
 		membership = ""
-
+		state = ""
 		for i in range(0, len(lines)):
 
-			membership += lines[i].membership_id.name
+			membership += lines[i].membership_id.name + " ("
+			state = lines[i].state if lines[i].state else "-"
+			membership += state + ")"
 			
 			if i + 1 < len(lines):
-				membership += ", "
+				membership += "\n"
 
 		self.member_membership = membership
+
 
 
 class MembershipProductModifications(models.Model):
