@@ -30,7 +30,8 @@
     'application': False,
     'installable': True,
     'depends': [
-        'membership',
+        'product',
+        'membership'
     ],
     'data': [
         'views/membership_modifications.xml'

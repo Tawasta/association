@@ -25,16 +25,8 @@ class MembershipModifications(models.Model):
 	
 	_inherit = 'res.partner'
 
-	# member_memberships = fields.Many2many('membership_membership_line')
-	
-	# member_memberships = fields.Many2many(
-	# 	'membership.membership_line',
-	# 	column1='id',
-	# 	column2='partner',
-	# 	string='Members memberships'
-	# )
-
 	member_membership = fields.Char('Memberships', compute='compute_member_membership')
+	
 
 	@api.one
 	def compute_member_membership(self):
@@ -51,3 +43,29 @@ class MembershipModifications(models.Model):
 				membership += ", "
 
 		self.member_membership = membership
+
+
+class MembershipProductModifications(models.Model):
+	_inherit = 'product.template'
+
+	members_paid = fields.Integer('Number of members', default=0, compute='compute_members_paid')
+
+	members_invoiced = fields.Integer('Invoiced members', default=0, compute='compute_members_invoiced')
+
+	@api.one
+	def compute_members_paid(self):
+
+
+		count_paid = self.env['membership.membership_line'].search_count([('membership_id',
+			'=', self.name), ('state', '=', 'paid')])
+		
+		self.members_paid = count_paid
+		
+
+	@api.one
+	def compute_members_invoiced(self):
+
+		count_invoiced = self.env['membership.membership_line'].search_count([('membership_id',
+			'=', self.name), ('state', '=', 'invoiced')])
+
+		self.members_invoiced = count_invoiced

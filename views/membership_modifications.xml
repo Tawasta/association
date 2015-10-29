@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
 	<data>
-		<!-- <record id="view_partner_form" model="ir.ui.view">
-			<field name="name">res.partner.form.inherit</field>
-			<field name="model">res.partner</field>
-			<field name="inherit_id" ref="membership.view_partner_form"/>
-			<field name="arch" type="xml">
-				<field name="category_id" position="after">
-
-						 <label string="Memberships" for="member_memberships"/> 
-						<field name="member_memberships" widget="many2many_tags"/>  
-				</field>
-			</field>
-        </record> -->
 
         <record model="ir.ui.view" id="membership_members_tree">
             <field name="name">Members</field>
@@ -23,6 +11,28 @@
                 	<field name="member_membership" />
             	</field>
             </field>
+        </record>
+
+        <record id="membership_products_form" model="ir.ui.view">
+        	<field name="name">Membership Products</field>
+        	<field name="model">product.template</field>
+        	<field name="inherit_id" ref="membership.membership_products_form"/>
+        	<field name="priority" eval="200"/>
+        	<field name="arch" type="xml">
+        		<label for='name' position='before'>
+        			<div class="oe_right oe_button_box" name="buttons">
+        				<button class="oe_inline oe_stat_button" icon="fa-user">
+        					
+        					<field string="Paid members" name="members_paid" widget="statinfo"/>
+        				</button>
+
+        				<button class="oe_inline oe_stat_button" icon="fa-user">
+        					
+        					<field string="Invoiced members" name="members_invoiced" widget="statinfo"/>
+        				</button>
+        			</div>
+        		</label>
+        	</field>
         </record>
 
 	</data>
