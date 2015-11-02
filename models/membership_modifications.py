@@ -46,12 +46,14 @@ class MembershipModifications(models.Model):
 
 
 
+
+
 class MembershipProductModifications(models.Model):
 	_inherit = 'product.template'
 
 	members_paid = fields.Integer('Number of members', default=0, compute='compute_members_paid')
-
 	members_invoiced = fields.Integer('Invoiced members', default=0, compute='compute_members_invoiced')
+	membership_product_id = fields.Integer('Id of membership product', compute='compute_membership_product_id')
 
 	@api.one
 	def compute_members_paid(self):
@@ -70,3 +72,17 @@ class MembershipProductModifications(models.Model):
 			'=', self.name), ('state', '=', 'invoiced')])
 
 		self.members_invoiced = count_invoiced
+
+
+	@api.one
+	def compute_membership_product_id(self):
+
+		line = self.env['membership.membership_line'].search([('membership_id',
+			'=', self.name)])
+
+		if len(line) > 1:
+			self.membership_product_id = line[0].membership_id.id
+		else:
+			self.membership_product_id = line.membership_id.id
+
+

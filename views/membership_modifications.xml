@@ -1,36 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
 	<data>
-		<!-- Extend membership tree view -->
-        <record model="ir.ui.view" id="membership_members_tree">
+		
+         <!-- Extend membership tree view -->
+        <record id="membership_members_tree" model="ir.ui.view">
             <field name="name">Members</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="membership.membership_members_tree"/>
             <field name="arch" type="xml">
                 <field name="membership_state" position="after">
-                	<field name="member_membership" />
-            	</field>
-            	<field name="membership_state" position="attributes">
-            		<attribute name="invisible">True</attribute>
-            	</field>
+                    <field name="member_membership" />
+                </field>
+                <field name="membership_state" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
             </field>
         </record>
 
+        <!-- Action for button -->
+        <record id="act_membership_products_2_members" model="ir.actions.act_window">
+            <field name="name">Members</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="membership.membership_members_tree"/>
+            <field name="search_view_id" ref="membership.view_res_partner_member_filter"/>
+            <field name="domain">[('member_lines.membership_id', '=',
+                membership_product_id)]</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to create a member.
+              </p><p>
+                Odoo will help you efficiently handle memberships:
+                members, membership products, paid members.
+              </p>
+            </field>
+        </record>
+
+       
+
         <!-- Extend Membership Products form view with -->
-        <record id="membership_products_form" model="ir.ui.view">
-        	<field name="name">Membership Products</field>
+        <record id="membership_products_view_buttons" model="ir.ui.view">
+        	<field name="name">membership.products.view.buttons</field>
         	<field name="model">product.template</field>
         	<field name="inherit_id" ref="membership.membership_products_form"/>
         	<field name="priority" eval="200"/>
         	<field name="arch" type="xml">
         		<label for='name' position='before'>
         			<div class="oe_right oe_button_box" name="buttons">
-        				<button class="oe_inline oe_stat_button" icon="fa-user">
+                        <field name="membership_product_id" invisible="1"/>
+        				<button class="oe_inline oe_stat_button" 
+                            name="%(membership_modifications.act_membership_products_2_members)d" 
+                            context="{
+                                'search_default_paid_members':1, 
+                                'membership_product_id': membership_product_id}"
+                            type="action" icon="fa-user">
         					
         					<field string="Paid members" name="members_paid" widget="statinfo"/>
         				</button>
 
-        				<button class="oe_inline oe_stat_button" icon="fa-user">
+        				<button class="oe_inline oe_stat_button" 
+                            name="%(membership_modifications.act_membership_products_2_members)d" 
+                            context="{'search_default_invoiced_members':1, 
+                                'membership_product_id': membership_product_id}" 
+                            type="action" icon="fa-user">
         					
         					<field string="Invoiced members" name="members_invoiced" widget="statinfo"/>
         				</button>
