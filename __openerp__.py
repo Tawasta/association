@@ -23,7 +23,7 @@
     'name': 'membership_modifications',
     'summary': 'Membership management',
     'version': '8.0.1.0.0',
-    'category': 'Uncategorized',
+    'category': 'Association',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',

@@ -19,7 +19,8 @@ Configuration
 
 Usage
 =====
-Go to Association -> Members -> form view
+Access Association menu. In members tree view there is one additional field called "Memberships" where every membership of the current member and the membership products state is presented. In addition to that in membership product's form there are two additional smart buttons created, where you can see the amount of paid and invoiced members. By clicking these buttons, user is redirected to a list of members, who have paid or invoiced that membership product.  
+
 
 Known issues / Roadmap
 ======================

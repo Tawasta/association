@@ -2,7 +2,7 @@
 <openerp>
 	<data>
 		
-         <!-- Extend membership tree view -->
+        <!-- Extend membership tree view -->
         <record id="membership_members_tree" model="ir.ui.view">
             <field name="name">Members</field>
             <field name="model">res.partner</field>
@@ -24,8 +24,8 @@
             <field name="view_type">form</field>
             <field name="view_id" ref="membership.membership_members_tree"/>
             <field name="search_view_id" ref="membership.view_res_partner_member_filter"/>
-            <field name="domain">[('member_lines.membership_id', '=',
-                membership_product_id)]</field>
+            <field name="domain">['&amp;',('member_lines.membership_id', '=',
+                membership_product_id), ('member_lines.membership_id.state','=', line_state)]</field>
             <field name="view_mode">tree,form,kanban</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
@@ -53,7 +53,8 @@
                             name="%(membership_modifications.act_membership_products_2_members)d" 
                             context="{
                                 'search_default_paid_members':1, 
-                                'membership_product_id': membership_product_id}"
+                                'membership_product_id': membership_product_id, 
+                                'line_state': 'paid'}"
                             type="action" icon="fa-user">
         					
         					<field string="Paid members" name="members_paid" widget="statinfo"/>
@@ -62,7 +63,8 @@
         				<button class="oe_inline oe_stat_button" 
                             name="%(membership_modifications.act_membership_products_2_members)d" 
                             context="{'search_default_invoiced_members':1, 
-                                'membership_product_id': membership_product_id}" 
+                                'membership_product_id': membership_product_id, 
+                                'line_state': 'invoiced'}" 
                             type="action" icon="fa-user">
         					
         					<field string="Invoiced members" name="members_invoiced" widget="statinfo"/>
@@ -84,6 +86,21 @@
             		<separator/>
             		<filter string="Invoiced members" name="invoiced_members" domain="[('member_lines.state','=', 'invoiced')]" help="Invoiced Members"/>
             	</search>
+            </field>
+        </record>
+
+        <!-- Extend membership form view -->
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="name">view.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="membership.view_partner_form"/>
+            <field name="priority" eval="200"/>
+            <field name="arch" type="xml">
+                <field name="category_id" position="after">
+                    <!-- <label for="membership_tags" string="Memberships" />
+                    <field name="membership_tags" widget="many2many_tags"/>  -->
+
+                </field>
             </field>
         </record>
 
