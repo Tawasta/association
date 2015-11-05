@@ -89,20 +89,5 @@
             </field>
         </record>
 
-        <!-- Extend membership form view -->
-        <record id="view_partner_form" model="ir.ui.view">
-            <field name="name">view.partner.form.inherit</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="membership.view_partner_form"/>
-            <field name="priority" eval="200"/>
-            <field name="arch" type="xml">
-                <field name="category_id" position="after">
-                    <!-- <label for="membership_tags" string="Memberships" />
-                    <field name="membership_tags" widget="many2many_tags"/>  -->
-
-                </field>
-            </field>
-        </record>
-
 	</data>
 </openerp>
