@@ -25,7 +25,7 @@
             <field name="view_id" ref="membership.membership_members_tree"/>
             <field name="search_view_id" ref="membership.view_res_partner_member_filter"/>
             <field name="domain">['&amp;',('member_lines.membership_id', '=',
-                membership_product_id), ('member_lines.membership_id.state','=', line_state)]</field>
+                membership_product_id), ('member_lines.state','=', line_state)]</field>
             <field name="view_mode">tree,form,kanban</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
@@ -50,7 +50,7 @@
         			<div class="oe_right oe_button_box" name="buttons">
                         <field name="membership_product_id" invisible="1"/>
         				<button class="oe_inline oe_stat_button" 
-                            name="%(membership_modifications.act_membership_products_2_members)d" 
+                            name="%(membership_extension.act_membership_products_2_members)d" 
                             context="{
                                 'search_default_paid_members':1, 
                                 'membership_product_id': membership_product_id, 
@@ -61,7 +61,7 @@
         				</button>
 
         				<button class="oe_inline oe_stat_button" 
-                            name="%(membership_modifications.act_membership_products_2_members)d" 
+                            name="%(membership_extension.act_membership_products_2_members)d" 
                             context="{'search_default_invoiced_members':1, 
                                 'membership_product_id': membership_product_id, 
                                 'line_state': 'invoiced'}" 

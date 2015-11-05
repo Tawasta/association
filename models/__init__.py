@@ -19,4 +19,4 @@
 #
 ##############################################################################
 
-from . import membership_modifications
+from . import membership_extension

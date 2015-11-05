@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'membership_modifications',
+    'name': 'membership_extension',
     'summary': 'Membership management',
     'version': '8.0.1.0.0',
     'category': 'Association',
@@ -34,6 +34,6 @@
         'membership'
     ],
     'data': [
-        'views/membership_modifications.xml'
+        'views/membership_extension.xml'
     ],
 }
