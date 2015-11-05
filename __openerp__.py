@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'membership_extension',
+    'name': 'Membership Extension',
     'summary': 'Membership management',
     'version': '8.0.1.0.0',
     'category': 'Association',
