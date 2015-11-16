@@ -62,7 +62,8 @@
 
         				<button class="oe_inline oe_stat_button" 
                             name="%(membership_extension.act_membership_products_2_members)d" 
-                            context="{'search_default_invoiced_members':1, 
+                            context="{
+                                'search_default_invoiced_members':1, 
                                 'membership_product_id': membership_product_id, 
                                 'line_state': 'invoiced'}" 
                             type="action" icon="fa-user">
