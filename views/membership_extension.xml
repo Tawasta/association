@@ -2,6 +2,21 @@
 <openerp>
 	<data>
 		
+        <!-- Extend membership form view -->
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="name">Members Form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="membership.view_partner_form"/>
+            <field name="arch" type="xml">
+
+                <!-- Hide the associate member field -->
+                <field name="associate_member" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+
+            </field>
+        </record>
+
         <!-- Extend membership tree view -->
         <record id="membership_members_tree" model="ir.ui.view">
             <field name="name">Members</field>
@@ -42,8 +57,6 @@
               </p>
             </field>
         </record>
-
-       
 
         <!-- Extend Membership Products form view with -->
         <record id="membership_products_view_buttons" model="ir.ui.view">
