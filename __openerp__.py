@@ -22,7 +22,7 @@
 {
     'name': 'Membership Extension',
     'summary': 'Membership management',
-    'version': '8.0.1.0.0',
+    'version': '8.0.0.2.0',
     'category': 'Association',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -34,6 +34,6 @@
         'membership'
     ],
     'data': [
-        'views/membership_extension.xml'
+        'views/membership_extension.xml',
     ],
 }

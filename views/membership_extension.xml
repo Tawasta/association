@@ -46,7 +46,21 @@
         	<field name="inherit_id" ref="membership.membership_products_form"/>
         	<field name="priority" eval="200"/>
         	<field name="arch" type="xml">
-        		<label for='name' position='before'>
+
+                <!-- Improve product name (header) structure -->
+                <label for="name" position="replace" />
+
+                <h1 position="replace">
+                    <div class="oe_title oe_left" name="product_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                </h1>
+
+                <!-- Add buttons -->
+        		<div name="product_title" position='after'>
         			<div class="oe_right oe_button_box" name="buttons">
                         <field name="membership_product_id" invisible="1"/>
         				<button class="oe_inline oe_stat_button" 
@@ -71,7 +85,7 @@
         					<field string="Invoiced members" name="members_invoiced" widget="statinfo"/>
         				</button>
         			</div>
-        		</label>
+        		</div>
         	</field>
         </record>
 
