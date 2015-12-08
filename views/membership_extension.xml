@@ -38,6 +38,43 @@
             </field>
         </record>
 
+        <!-- Hide fields from customers -->
+        <record id="res_partner_tree_inherited" model="ir.ui.view">
+            <field name="name">res.partner.tree.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+
+                <field name="membership_state" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="grade_id" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+
+                <field name="activation" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+
+                <field name="date_review_next" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+            </field>
+        </record>
+
+        <!-- Hide Geo Localization -->
+        <record id="view_partner_form_inherited" model="ir.ui.view">
+            <field name="name">view.partner.form.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+
+                <page string="Geo Localization" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </page>
+            </field>
+        </record>
+
         <!-- Action for button -->
         <record id="act_membership_products_2_members" model="ir.actions.act_window">
             <field name="name">Members</field>
