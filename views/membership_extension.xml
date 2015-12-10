@@ -161,5 +161,14 @@
             </field>
         </record>
 
+        <!-- Change default view to tree view by changing eval from 1->4 -->
+        <record model="ir.actions.act_window.view" id="membership.action_membership_members_view_kanban">
+            <field name="sequence" eval="4"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="base.res_partner_kanban_view"/>
+            <field name="act_window_id" ref="membership.action_membership_members"/>
+        </record>
+
+
 	</data>
 </openerp>
