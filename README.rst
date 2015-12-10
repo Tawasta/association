@@ -26,7 +26,7 @@ Default view is changed from kanban to tree view in members. Geo Localization -p
 
 Known issues / Roadmap
 ======================
-\-
+There's a bug in membership products smart buttons: if a membership product has 0 paid members and 1 invoiced members and the member who is invoiced has other paid membership products, then the 0 paid members button leads to this member even though it shouldn't. This is because domain applys the 2 restrictions using OR and not AND.
 
 Credits
 =======
