@@ -13,6 +13,15 @@
                 <field name="associate_member" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </field>
+                <field name="free_member" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="membership_state" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <label for="membership_state" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </label>
 
             </field>
         </record>
