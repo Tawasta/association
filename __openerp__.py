@@ -22,7 +22,7 @@
 {
     'name': 'Membership Extension',
     'summary': 'Membership management',
-    'version': '8.0.0.2.2',
+    'version': '8.0.0.2.3',
     'category': 'Association',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -31,7 +31,8 @@
     'installable': True,
     'depends': [
         'product',
-        'membership'
+        'membership',
+        'crm_partner_assign',
     ],
     'data': [
         'views/membership_extension.xml',

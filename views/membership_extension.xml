@@ -48,9 +48,6 @@
                 <field name="membership_state" position="attributes">
                     <attribute name="invisible">True</attribute>
                 </field>
-                <field name="grade_id" position="attributes">
-                    <attribute name="invisible">True</attribute>
-                </field>
 
                 <field name="activation" position="attributes">
                     <attribute name="invisible">True</attribute>
@@ -61,6 +58,20 @@
                 </field>
             </field>
         </record>
+
+        <!-- Hide Grade -->
+        <record id="view_report_crm_partner_assign_filter" model="ir.ui.view">
+            <field name="name">Partner Tree View Remove Grade</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="crm_partner_assign.view_report_crm_partner_assign_filter"/>
+            <field name="arch" type="xml">
+
+                <field name="grade_id" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+            </field>
+        </record>
+
 
         <!-- Hide Geo Localization -->
         <record id="view_partner_form_inherited" model="ir.ui.view">
