@@ -61,9 +61,6 @@ class MembershipProductModifications(models.Model):
 	members_invoiced = fields.Integer('Invoiced members', default=0, compute='compute_members_invoiced')
 	membership_product_id = fields.Integer('Id of membership product', compute='compute_membership_product_id')
 	
-	# valid_members_paid = fields.One2many('res.partner', compute='compute_valid_members_paid', search='_search_partners')
-	# valid_members_invoiced = fields.One2many('res.partner', compute='compute_valid_members_invoiced')
-	
 	# 3. Default methods	
 
 	# 4. Compute and search fields, in the same order that fields declaration
@@ -94,42 +91,6 @@ class MembershipProductModifications(models.Model):
 			self.membership_product_id = line[0].membership_id.id
 		else:
 			self.membership_product_id = line.membership_id.id
-
-	# @api.one
-	# def compute_valid_members_paid(self):
-		
-	# 	valid_member_paid = self.env['membership.membership_line'].search([['membership_id', '=', self.name], ['state','=', 'paid']])
-	# 	self.valid_members_paid = self.env['res.partner'].search([['member_lines', 'in', valid_member_paid.ids]])
-	# 	print self.valid_members_paid.ids
-	# 	lista = []
-	# 	for member_id in member_ids:
-	# 		lista.append(member_id)
-
-
-	# 	 = lista
-	# 	print lista
-	# 	result = {
-	# 		'domain': {
-	# 			'member_lines': [('id', 'in', self.valid_members_paid.ids)]			
-	# 		},
-	# 	}
-	# 	return result
-
-
-	# @api.one
-	# def compute_valid_members_invoiced(self):
-		
-		
-	# 	valid_member_invoiced = self.env['membership.membership_line'].search([['membership_id', '=', self.name], ['state','=', 'invoiced']])	
-	# 	member_ids = self.env['res.partner'].search([['member_lines', 'in', valid_member_invoiced.ids]]).ids
-	# 	lista = []
-	# 	for member_id in member_ids:
-	# 		lista.append(member_id)
-
-
-	# 	self.valid_members_invoiced = lista
-	# 	print lista
-	
 
 	# 5. Constraints and onchanges
 
