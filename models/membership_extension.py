@@ -29,13 +29,14 @@ class MembershipModifications(models.Model):
 	def compute_member_membership(self):
 		
 		lines = self.member_lines
+		states = dict(lines.fields_get(['state'])['state']['selection'])
 		membership = ""
 		state = ""
 		for i in range(0, len(lines)):
 
 			membership += lines[i].membership_id.name + " ("
 			state = lines[i].state if lines[i].state else "-"
-			membership += state + ")"
+			membership += (states.get(state) or "") + ")"
 
 			if i + 1 < len(lines):
 				membership += "\n"
