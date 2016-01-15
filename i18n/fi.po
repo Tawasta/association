@@ -1,12 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* membership_extension
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: 2016-01-15 14:18+0200\n"
-"PO-Revision-Date: 2016-01-15 14:18+0200\n"
-"Last-Translator: \n"
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-15 13:12+0000\n"
+"PO-Revision-Date: 2016-01-15 15:13+0200\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fi_FI\n"
 "X-Generator: Poedit 1.7.5\n"
-"X-Poedit-Basepath: .\n"
+
+#. module: membership_extension
+#: model:ir.actions.act_window,help:membership_extension.act_membership_products_2_members
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a member.\n"
+"              </p><p>\n"
+"                Odoo will help you efficiently handle memberships:\n"
+"                members, membership products, paid members.\n"
+"              </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Paina luodaksesi jäsenen.\n"
+"              </p><p>\n"
+"                Odoo auttaa sinua käsittelemään jäsenyydet tehokkaasti.\n"
+"              </p>\n"
+"            "
+
+#. module: membership_extension
+#: model:ir.ui.menu,name:membership_extension.menu_members_waiting
+msgid "Applied Members"
+msgstr "Jäsenhakemukset"
+
+#. module: membership_extension
+#: view:res.partner:membership_extension.view_partner_form_inherited
+msgid "Geo Localization"
+msgstr "Maantieteellinen lokalisointi"
+
+#. module: membership_extension
+#: view:res.partner:membership_extension.view_res_partner_member_filter
+msgid "Invoiced Members"
+msgstr "Laskutetut asiakkaat"
+
+#. module: membership_extension
+#: view:product.template:membership_extension.membership_products_view_buttons
+#: view:res.partner:membership_extension.view_res_partner_member_filter
+msgid "Invoiced members"
+msgstr "Laskutetut asiakkaat"
+
+#. module: membership_extension
+#: model:ir.actions.act_window,name:membership_extension.act_membership_products_2_members
+#: model:ir.actions.act_window,name:membership_extension.action_membership_members_waiting
+msgid "Members"
+msgstr "Jäsenet"
+
+#. module: membership_extension
+#: view:res.partner:membership_extension.view_res_partner_member_filter
+msgid "Membership Partners"
+msgstr "Jäsenyyskumppanit"
+
+#. module: membership_extension
+#: code:addons/membership_extension/models/membership_extension.py:23
+#, python-format
+msgid "Memberships"
+msgstr "Jäsenyydet"
+
+#. module: membership_extension
+#: view:res.partner:membership_extension.view_res_partner_member_filter
+msgid "Paid Members"
+msgstr "Maksaneet asiakkaat"
+
+#. module: membership_extension
+#: view:product.template:membership_extension.membership_products_view_buttons
+#: view:res.partner:membership_extension.view_res_partner_member_filter
+msgid "Paid members"
+msgstr "Maksaneet asiakkaat"
+
+#. module: membership_extension
+#: model:ir.model,name:membership_extension.model_res_partner
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: membership_extension
+#: model:ir.model,name:membership_extension.model_product_template
+msgid "Product Template"
+msgstr "Tuotemalli"
+
+#. module: membership_extension
+#: view:res.partner:membership_extension.res_partner_tree_inherited
+#: view:res.partner:membership_extension.view_report_crm_partner_assign_filter
+msgid "True"
+msgstr "Tosi"
