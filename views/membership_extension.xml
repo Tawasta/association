@@ -175,8 +175,8 @@
 
             	<search string="Membership Partners">
             		<filter string="Paid members" name="paid_members" domain="[('member_lines.state','=', 'paid')]" help="Paid Members"/>
-            		<separator/>
             		<filter string="Invoiced members" name="invoiced_members" domain="[('member_lines.state','=', 'invoiced')]" help="Invoiced Members"/>
+                    <filter string="Waiting members" name="waiting_members" domain="[('member_lines.state','=', 'waiting')]" help="Members that have applied"/>
             	</search>
             </field>
         </record>
@@ -193,7 +193,7 @@
             <field name="name">Members</field>
             <field name="res_model">res.partner</field>
             <field name="search_view_id" ref="view_res_partner_member_filter"/>
-            <field name="domain">[["membership_state","=","waiting"]]</field>
+            <field name="domain">[["membership_start","!=", False]]</field>
         </record>
 
         <record model="ir.actions.act_window.view" id="action_membership_members_view_tree">
