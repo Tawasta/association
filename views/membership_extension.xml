@@ -2,7 +2,7 @@
 <openerp>
 	<data>
 		
-        <!-- Extend membership form view -->
+        <!-- Modify membership form view -->
         <record id="view_partner_form" model="ir.ui.view">
             <field name="name">Members Form</field>
             <field name="model">res.partner</field>
@@ -41,9 +41,9 @@
                 <field name="membership_state" position="after">
                     <field name="member_membership" />
                 </field>
-                <!-- <field name="membership_state" position="attributes">
+                <field name="membership_state" position="attributes">
                     <attribute name="invisible">True</attribute>
-                </field> -->
+                </field>
             </field>
         </record>
 
@@ -162,6 +162,11 @@
         				</button>
         			</div>
         		</div>
+                
+                <!-- Add form-type field -->
+                <field name="active" position="after">
+                    <field name="membership_checkout_form" widget="selection"/>
+                </field>
         	</field>
         </record>
 
