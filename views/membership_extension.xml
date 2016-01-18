@@ -115,7 +115,7 @@
             </field>
         </record>
 
-        <!-- Extend Membership Products form view with -->
+        <!-- Extend Membership Products form view -->
         <record id="membership_products_view_buttons" model="ir.ui.view">
         	<field name="name">membership.products.view.buttons</field>
         	<field name="model">product.template</field>
@@ -161,12 +161,7 @@
         					<field string="Invoiced members" name="members_invoiced" widget="statinfo"/>
         				</button>
         			</div>
-        		</div>
-                
-                <!-- Add form-type field -->
-                <field name="active" position="after">
-                    <field name="membership_checkout_form" widget="selection"/>
-                </field>
+        		</div> 
         	</field>
         </record>
 

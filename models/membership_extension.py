@@ -61,8 +61,7 @@ class MembershipProductModifications(models.Model):
 	members_paid = fields.Integer('Number of members', default=0, compute='compute_members_paid')
 	members_invoiced = fields.Integer('Invoiced members', default=0, compute='compute_members_invoiced')
 	membership_product_id = fields.Integer('Id of membership product', compute='compute_membership_product_id')
-	membership_checkout_form = fields.Selection([('default','Default'),
-		('community', 'Community'), ('support','Support')], 'Checkout form type', default='default')
+	
 	# 3. Default methods	
 
 	# 4. Compute and search fields, in the same order that fields declaration
