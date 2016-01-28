@@ -11,15 +11,6 @@
                 <field name='name' position='after'>
                     <field name="customer_of" string="Member of" filter_domain="[('customer_of','ilike',self)]" />
                 </field>
-
-                <search position="inside">
-                    <group name="Memberships" string="Memberships">
-                        <filter string="Not a member"
-                                name="no_customer_of"
-                                domain="[('customer_of','=',False)]"
-                                help="Not a member" />
-                    </group>
-                </search>
             </field>
       	</record>
 
