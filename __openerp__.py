@@ -22,7 +22,7 @@
 {
     'name': 'Member Multi-company',
     'summary': 'Allows marking which companies a member belongs to',
-    'version': '8.0.0.2.2',
+    'version': '8.0.0.2.3',
     'category': 'Association',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
