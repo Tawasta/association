@@ -58,6 +58,10 @@
                     <attribute name="invisible">True</attribute>
                 </field>
 
+                <field name="membership_state" position="after">
+                    <field name="member_membership" />
+                </field>
+
                 <field name="activation" position="attributes">
                     <attribute name="invisible">True</attribute>
                 </field>
