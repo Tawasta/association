@@ -56,8 +56,6 @@ class ResCompany(models.Model):
                     continue
 
                 # Create a membership line
-                membership_state = invoice.partner_id.membership_state
-
                 date_from = line.product_id.membership_date_from
                 date_to = line.product_id.membership_date_to
 
@@ -66,12 +64,26 @@ class ResCompany(models.Model):
                     'membership_id': line.product_id.id,
                     'member_price': line.price_unit,
                     'date': fields.Date.today(),
-                    'date_from': invoice.date_invoice,
+                    'date_from': date_from,
                     'date_to': date_to,
                     'account_invoice_line': line.id,
-                    'state': membership_state,
                 }
 
-                self.env['membership.membership_line'].create(values)
+                membership_line = self.env['membership.membership_line'].create(values)
 
-                invoice.partner_id.membership = membership_state
+                partner = invoice.partner_id
+                membership_state = partner._get_membership_state()[partner.id]
+
+                membership_line.state = membership_state
+                #membership_line.write({'state': membership_state})
+                invoice.partner_id.membership_state = membership_state
+
+class ResPartner(models.Model):
+
+    # 1. Private attributes
+    _inherit = 'res.partner'
+
+    # A helper to use the _membership_state-method from new api
+    @api.model
+    def _get_membership_state(self):
+        return super(ResPartner, self)._membership_state(args={}, name=False, context=self._context)
