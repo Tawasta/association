@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-29 10:42+0000\n"
-"PO-Revision-Date: 2016-01-29 12:44+0200\n"
+"POT-Creation-Date: 2016-03-16 07:12+0000\n"
+"PO-Revision-Date: 2016-03-16 09:13+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -48,13 +48,13 @@ msgstr "Maantieteellinen lokalisointi"
 #. module: membership_extension
 #: view:res.partner:membership_extension.view_res_partner_member_filter
 msgid "Invoiced Members"
-msgstr "Laskutetut asiakkaat"
+msgstr "Laskutetut jäsenet"
 
 #. module: membership_extension
 #: view:product.template:membership_extension.membership_products_view_buttons
 #: view:res.partner:membership_extension.view_res_partner_member_filter
 msgid "Invoiced members"
-msgstr "Laskutetut asiakkaat"
+msgstr "Laskutetut jäsenet"
 
 #. module: membership_extension
 #: model:ir.actions.act_window,name:membership_extension.act_membership_products_2_members
@@ -76,13 +76,13 @@ msgstr "Jäsenyydet"
 #. module: membership_extension
 #: view:res.partner:membership_extension.view_res_partner_member_filter
 msgid "Paid Members"
-msgstr "Maksaneet asiakkaat"
+msgstr "Maksaneet jäsenet"
 
 #. module: membership_extension
 #: view:product.template:membership_extension.membership_products_view_buttons
 #: view:res.partner:membership_extension.view_res_partner_member_filter
 msgid "Paid members"
-msgstr "Maksaneet asiakkaat"
+msgstr "Maksaneet jäsenet"
 
 #. module: membership_extension
 #: model:ir.model,name:membership_extension.model_res_partner
