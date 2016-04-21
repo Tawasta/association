@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record id="view_company_form" model="ir.ui.view">
+			<field name="name">Membership update</field>
+			<field name="model">res.company</field>
+			<field name="inherit_id" ref="base.view_company_form" />
+			<field name="arch" type="xml">
+
+				<page string="Configuration" position="inside">
+
+                    <group string="Membership update">
+                        <group>
+                            <button string="Update"
+                                    name="membership_update_member_status"
+                                    class="oe_inline oe_stat_button"
+                                    type="object"
+                                    icon="fa-users"/>
+                        </group>
+                    </group>
+                </page>
+
+			</field>
+		</record> 
+
+	</data>
+</openerp>
