@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+    	<!-- Customers -->
+      	<record id="view_res_partner_filter" model="ir.ui.view">
+            <field name="name">Membership Search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <field name='name' position='after'>
+                    <field name="customer_of" string="Member of" filter_domain="[('customer_of','ilike',self)]" />
+                </field>
+            </field>
+      	</record>
+
+    </data>
+</openerp>

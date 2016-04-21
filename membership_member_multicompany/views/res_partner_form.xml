@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record id="res_partner_multicompany" model="ir.ui.view">
+			<field name="name">Replace multicompany</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="res_partner_multicompany.res_partner_multicompany" />
+			<field name="arch" type="xml">
+
+				<field name="customer_of" position="replace" />
+
+			</field>
+		</record>
+
+        <record id="view_partner_form" model="ir.ui.view">
+			<field name="name">Member of</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="membership.view_partner_form" />
+			<field name="arch" type="xml">
+
+                <field name="member_lines" position="before">
+                    <group name="member_of">
+                        <field name="customer_of" widget="many2many_tags" string="Member of" />
+                    </group>
+                </field>
+
+			</field>
+		</record>
+
+	</data>
+</openerp>
