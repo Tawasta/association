@@ -21,7 +21,7 @@
 
 {
     'name': 'Membership Extension',
-    'summary': 'Membership management',
+    'summary': 'Generic membership improvements',
     'version': '8.0.0.4.5',
     'category': 'Association',
     'website': 'http://www.tawasta.fi',
