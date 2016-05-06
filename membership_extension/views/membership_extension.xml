@@ -33,6 +33,10 @@
             <field name="inherit_id" ref="membership.membership_members_tree"/>
             <field name="arch" type="xml">
 
+                <field name="name" position="before">
+                    <field name="customer_number" string="Member number" />
+                </field>
+
                 <!-- Hide the associate member field -->
                 <field name="associate_member" position="attributes">
                     <attribute name="invisible">1</attribute>
