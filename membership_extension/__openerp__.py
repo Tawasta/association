@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Author: 
+#    Author: Oy Tawasta OS Technologies Ltd.
 #    Copyright 2015 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@
 {
     'name': 'Membership Extension',
     'summary': 'Generic membership improvements',
-    'version': '8.0.0.4.6',
+    'version': '8.0.0.4.7',
     'category': 'Association',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -33,8 +33,10 @@
         'product',
         'membership',
         'crm_partner_assign',
+        'crm_customer_number',
     ],
     'data': [
+        'views/member_info_tree.xml',
         'views/member_menu.xml',
         'views/membership_extension.xml',
     ],

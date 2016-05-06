@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+        <!-- Create custom filters to membership tree view -->
+        <record id="res_partner_member_info_tree" model="ir.ui.view">
+        	<field name="name">res.partner.member.info.tree</field>
+            <field name="model">res.partner</field>
+            <field name="priority">50</field>
+            <field name="arch" type="xml">
+                <tree string="Member info">
+                    <field name="customer_number"/>
+                    <field name="name"/>
+                    <field name="street"/>
+                    <field name="street2"/>
+                    <field name="zip"/>
+                    <field name="city"/>
+                    <field name="member_membership" />
+                </tree>
+            </field>
+        </record>
+
+	</data>
+</openerp>
