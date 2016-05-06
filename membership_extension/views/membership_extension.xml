@@ -184,37 +184,6 @@
             </field>
         </record>
 
-        <!-- Change default view to tree view by changing eval from 1->4 -->
-        <record model="ir.actions.act_window.view" id="membership.action_membership_members_view_kanban">
-            <field name="sequence" eval="4"/>
-            <field name="view_mode">kanban</field>
-            <field name="view_id" ref="base.res_partner_kanban_view"/>
-            <field name="act_window_id" ref="membership.action_membership_members"/>
-        </record>
-
-        <record model="ir.actions.act_window" id="action_membership_members_waiting">
-            <field name="name">Members</field>
-            <field name="res_model">res.partner</field>
-            <field name="search_view_id" ref="view_res_partner_member_filter"/>
-            <field name="domain">[('member_lines.state','=','waiting')]</field>
-        </record>
-
-        <record model="ir.actions.act_window.view" id="action_membership_members_view_tree">
-            <field name="sequence" eval="2"/>
-            <field name="view_mode">tree</field>
-            <field name="view_id" ref="membership_members_tree"/>
-            <field name="act_window_id" ref="action_membership_members_waiting"/>
-        </record>
-
-        <menuitem name="Applied Members" parent="membership.menu_membership" id="menu_members_waiting" sequence="10" action="action_membership_members_waiting"/>
-
-        <!-- Removed default_free_member from context -->
-        <record model="ir.actions.act_window" id="membership.action_membership_members">
-            <field name="name">Members</field>
-            <field name="res_model">res.partner</field>
-            <field name="search_view_id" ref="view_res_partner_member_filter"/>
-            <field name="context">{"search_default_all_members": 1}</field>
-        </record>
 
 	</data>
 </openerp>
