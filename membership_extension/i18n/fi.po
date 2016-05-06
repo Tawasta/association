@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-16 07:12+0000\n"
-"PO-Revision-Date: 2016-03-16 09:13+0200\n"
+"POT-Creation-Date: 2016-05-06 11:37+0000\n"
+"PO-Revision-Date: 2016-05-06 14:38+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: fi_FI\n"
-"X-Generator: Poedit 1.7.5\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #. module: membership_extension
 #: model:ir.actions.act_window,help:membership_extension.act_membership_products_2_members
@@ -46,15 +46,39 @@ msgid "Geo Localization"
 msgstr "Maantieteellinen lokalisointi"
 
 #. module: membership_extension
+#: field:product.template,membership_product_id:0
+msgid "Id of membership product"
+msgstr "Jäsenyystuotteiden id"
+
+#. module: membership_extension
 #: view:res.partner:membership_extension.view_res_partner_member_filter
 msgid "Invoiced Members"
-msgstr "Laskutetut jäsenet"
+msgstr "Laskutetut asiakkaat"
 
 #. module: membership_extension
 #: view:product.template:membership_extension.membership_products_view_buttons
+#: field:product.template,members_invoiced:0
 #: view:res.partner:membership_extension.view_res_partner_member_filter
 msgid "Invoiced members"
-msgstr "Laskutetut jäsenet"
+msgstr "Laskutetut asiakkaat"
+
+#. module: membership_extension
+#: field:res.partner,member_membership:0
+msgid "Jäsenyydet"
+msgstr "Jäsenyydet"
+
+#. module: membership_extension
+#: model:ir.actions.act_window,name:membership_extension.action_membership_member_info
+#: model:ir.ui.menu,name:membership_extension.menu_member_info
+#: view:res.partner:membership_extension.res_partner_member_info_tree
+msgid "Member info"
+msgstr "Jäsentiedot"
+
+#. module: membership_extension
+#: view:res.partner:membership_extension.membership_members_tree
+#: view:res.partner:membership_extension.res_partner_member_info_tree
+msgid "Member number"
+msgstr "Jäsennumero"
 
 #. module: membership_extension
 #: model:ir.actions.act_window,name:membership_extension.act_membership_products_2_members
@@ -74,15 +98,20 @@ msgid "Memberships"
 msgstr "Jäsenyydet"
 
 #. module: membership_extension
+#: field:product.template,members_paid:0
+msgid "Number of members"
+msgstr "Jäsenten määrä"
+
+#. module: membership_extension
 #: view:res.partner:membership_extension.view_res_partner_member_filter
 msgid "Paid Members"
-msgstr "Maksaneet jäsenet"
+msgstr "Maksaneet asiakkaat"
 
 #. module: membership_extension
 #: view:product.template:membership_extension.membership_products_view_buttons
 #: view:res.partner:membership_extension.view_res_partner_member_filter
 msgid "Paid members"
-msgstr "Maksaneet jäsenet"
+msgstr "Maksaneet asiakkaat"
 
 #. module: membership_extension
 #: model:ir.model,name:membership_extension.model_res_partner
