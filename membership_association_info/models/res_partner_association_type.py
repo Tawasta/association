@@ -18,6 +18,7 @@ class ResPartnerAssociationType(models.Model):
 
     # 1. Private attributes
     _name = 'res.partner.association.type'
+    _order = 'name'
 
     # 2. Fields declaration
     name = fields.Char()

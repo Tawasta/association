@@ -18,6 +18,7 @@ class ResPartnerAssociationCategory(models.Model):
 
     # 1. Private attributes
     _name = 'res.partner.association.category'
+    _order = 'name'
 
     # 2. Fields declaration
     name = fields.Char()
