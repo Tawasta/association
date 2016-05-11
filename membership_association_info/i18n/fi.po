@@ -1,0 +1,121 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* membership_association_info
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-11 15:29+0000\n"
+"PO-Revision-Date: 2016-05-11 18:56+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.7.5\n"
+
+#. module: membership_association_info
+#: selection:res.partner,association_status:0
+msgid "Active"
+msgstr "Aktiivinen"
+
+#. module: membership_association_info
+#: view:res.partner:membership_association_info.view_partner_form
+msgid "Association info"
+msgstr "Yhdistyksen tiedot"
+
+#. module: membership_association_info
+#: field:res.partner,association_category:0
+msgid "Category"
+msgstr "Kategoria"
+
+#. module: membership_association_info
+#: field:res.partner.association.category,create_uid:0
+#: field:res.partner.association.type,create_uid:0
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: membership_association_info
+#: field:res.partner.association.category,create_date:0
+#: field:res.partner.association.type,create_date:0
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: membership_association_info
+#: field:res.partner.association.category,display_name:0
+#: field:res.partner.association.type,display_name:0
+msgid "Display Name"
+msgstr "Nimi"
+
+#. module: membership_association_info
+#: field:res.partner,association_date_founding:0
+msgid "Founding date"
+msgstr "Perustamispäivä"
+
+#. module: membership_association_info
+#: field:res.partner.association.category,id:0
+#: field:res.partner.association.type,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: membership_association_info
+#: selection:res.partner,association_status:0
+msgid "Inactive"
+msgstr "Lepäävä"
+
+#. module: membership_association_info
+#: field:res.partner,association_date_join:0
+msgid "Join date"
+msgstr "Liittymispäivä"
+
+#. module: membership_association_info
+#: field:res.partner.association.category,__last_update:0
+#: field:res.partner.association.type,__last_update:0
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: membership_association_info
+#: field:res.partner.association.category,write_uid:0
+#: field:res.partner.association.type,write_uid:0
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: membership_association_info
+#: field:res.partner.association.category,write_date:0
+#: field:res.partner.association.type,write_date:0
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: membership_association_info
+#: field:res.partner.association.category,name:0
+#: field:res.partner.association.type,name:0
+msgid "Name"
+msgstr "Nimi"
+
+#. module: membership_association_info
+#: model:ir.model,name:membership_association_info.model_res_partner
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: membership_association_info
+#: selection:res.partner,association_status:0
+msgid "Resigned"
+msgstr "Eronnut"
+
+#. module: membership_association_info
+#: field:res.partner,association_status_date_change:0
+msgid "Stage change"
+msgstr "Tilan muutos"
+
+#. module: membership_association_info
+#: field:res.partner,association_status:0
+msgid "Status"
+msgstr "Tila"
+
+#. module: membership_association_info
+#: field:res.partner,association_type:0
+msgid "Type"
+msgstr "Tyyppi"
