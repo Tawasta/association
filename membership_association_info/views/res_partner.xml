@@ -23,6 +23,14 @@
                                 <field name="association_date_founding" />
                                 <field name="association_date_join" />
                             </group>
+
+                            <label for="association_members" colspan="2"/>
+                            <field name="association_members" nolabel="1" colspan="2">
+                                <tree editable="top/bottom">
+                                    <field name="name" />
+                                    <field name="amount" sum="Total" />
+                                </tree>
+                            </field>
                         </group>
                     </page>
 				</page>

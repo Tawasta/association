@@ -35,6 +35,7 @@ class ResPartner(models.Model):
     association_date_founding = fields.Date('Founding date')
     association_category = fields.Many2one('res.partner.association.category', 'Category')
     association_type = fields.Many2one('res.partner.association.type', 'Type')
+    association_members = fields.One2many('res.partner.association.members', 'partner', 'Members')
 
     # 3. Default methods
 

@@ -6,21 +6,31 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-11 15:29+0000\n"
-"PO-Revision-Date: 2016-05-11 18:56+0200\n"
-"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
+"POT-Creation-Date: 2016-05-24 13:09+0000\n"
+"PO-Revision-Date: 2016-05-24 16:10+0300\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "Language: fi\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #. module: membership_association_info
 #: selection:res.partner,association_status:0
 msgid "Active"
 msgstr "Aktiivinen"
+
+#. module: membership_association_info
+#: field:res.partner.association.members,amount:0
+msgid "Amount"
+msgstr "Määrä"
+
+#. module: membership_association_info
+#: field:res.partner.association.members,partner:0
+msgid "Association"
+msgstr "Yhdistys"
 
 #. module: membership_association_info
 #: view:res.partner:membership_association_info.view_partner_form
@@ -34,18 +44,21 @@ msgstr "Kategoria"
 
 #. module: membership_association_info
 #: field:res.partner.association.category,create_uid:0
+#: field:res.partner.association.members,create_uid:0
 #: field:res.partner.association.type,create_uid:0
 msgid "Created by"
 msgstr "Luonut"
 
 #. module: membership_association_info
 #: field:res.partner.association.category,create_date:0
+#: field:res.partner.association.members,create_date:0
 #: field:res.partner.association.type,create_date:0
 msgid "Created on"
 msgstr "Luotu"
 
 #. module: membership_association_info
 #: field:res.partner.association.category,display_name:0
+#: field:res.partner.association.members,display_name:0
 #: field:res.partner.association.type,display_name:0
 msgid "Display Name"
 msgstr "Nimi"
@@ -57,6 +70,7 @@ msgstr "Perustamispäivä"
 
 #. module: membership_association_info
 #: field:res.partner.association.category,id:0
+#: field:res.partner.association.members,id:0
 #: field:res.partner.association.type,id:0
 msgid "ID"
 msgstr "ID"
@@ -73,21 +87,29 @@ msgstr "Liittymispäivä"
 
 #. module: membership_association_info
 #: field:res.partner.association.category,__last_update:0
+#: field:res.partner.association.members,__last_update:0
 #: field:res.partner.association.type,__last_update:0
 msgid "Last Modified on"
 msgstr "Viimeksi muokattu"
 
 #. module: membership_association_info
 #: field:res.partner.association.category,write_uid:0
+#: field:res.partner.association.members,write_uid:0
 #: field:res.partner.association.type,write_uid:0
 msgid "Last Updated by"
 msgstr "Viimeksi päivittänyt"
 
 #. module: membership_association_info
 #: field:res.partner.association.category,write_date:0
+#: field:res.partner.association.members,write_date:0
 #: field:res.partner.association.type,write_date:0
 msgid "Last Updated on"
 msgstr "Viimeksi päivitetty"
+
+#. module: membership_association_info
+#: field:res.partner,association_members:0
+msgid "Members"
+msgstr "Jäsenet"
 
 #. module: membership_association_info
 #: field:res.partner.association.category,name:0
@@ -116,6 +138,12 @@ msgid "Status"
 msgstr "Tila"
 
 #. module: membership_association_info
+#: view:res.partner:membership_association_info.view_partner_form
+msgid "Total"
+msgstr "Total"
+
+#. module: membership_association_info
 #: field:res.partner,association_type:0
+#: field:res.partner.association.members,name:0
 msgid "Type"
 msgstr "Tyyppi"

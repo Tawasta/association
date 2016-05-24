@@ -1,3 +1,4 @@
 import res_partner
 import res_partner_association_category
+import res_partner_association_members
 import res_partner_association_type
