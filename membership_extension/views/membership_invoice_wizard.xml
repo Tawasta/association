@@ -9,7 +9,12 @@
 			<field name="arch" type="xml">
 
                 <field name="member_price" position="after">
-                    <field name="payment_term" style="width: 30%%;" />
+					<label for="payment_term" />
+                    <div>
+						<field name="payment_term" style="width: 30%%;" nolabel="1" />
+						<label for="payment_term" string="Leave empty for default payment term." />
+					</div>
+
                 </field>
 
 			</field>

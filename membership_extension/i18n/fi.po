@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-09 06:36+0000\n"
-"PO-Revision-Date: 2016-06-09 09:36+0300\n"
+"POT-Creation-Date: 2016-06-09 06:41+0000\n"
+"PO-Revision-Date: 2016-06-09 09:41+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -61,6 +61,11 @@ msgstr "Laskutetut asiakkaat"
 #: view:res.partner:membership_extension.view_res_partner_member_filter
 msgid "Invoiced members"
 msgstr "Laskutetut asiakkaat"
+
+#. module: membership_extension
+#: view:membership.invoice:membership_extension.view_membership_invoice_view
+msgid "Leave empty for default payment term."
+msgstr "Jätä tyhjäksi käyttääksesi oletusmaksuehtoja."
 
 #. module: membership_extension
 #: model:ir.actions.act_window,name:membership_extension.action_membership_member_info
@@ -134,4 +139,4 @@ msgstr "Tuotemalli"
 #: view:res.partner:membership_extension.res_partner_tree_inherited
 #: view:res.partner:membership_extension.view_report_crm_partner_assign_filter
 msgid "True"
-msgstr "Tosi"
+msgstr "True"
