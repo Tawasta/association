@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 11:37+0000\n"
-"PO-Revision-Date: 2016-05-06 14:38+0300\n"
+"POT-Creation-Date: 2016-06-09 06:36+0000\n"
+"PO-Revision-Date: 2016-06-09 09:36+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -63,11 +63,6 @@ msgid "Invoiced members"
 msgstr "Laskutetut asiakkaat"
 
 #. module: membership_extension
-#: field:res.partner,member_membership:0
-msgid "Jäsenyydet"
-msgstr "Jäsenyydet"
-
-#. module: membership_extension
 #: model:ir.actions.act_window,name:membership_extension.action_membership_member_info
 #: model:ir.ui.menu,name:membership_extension.menu_member_info
 #: view:res.partner:membership_extension.res_partner_member_info_tree
@@ -87,12 +82,18 @@ msgid "Members"
 msgstr "Jäsenet"
 
 #. module: membership_extension
+#: model:ir.model,name:membership_extension.model_membership_invoice
+msgid "Membership Invoice"
+msgstr "Jäsenyyslasku"
+
+#. module: membership_extension
 #: view:res.partner:membership_extension.view_res_partner_member_filter
 msgid "Membership Partners"
 msgstr "Jäsenyyspartnerit"
 
 #. module: membership_extension
 #: code:addons/membership_extension/models/membership_extension.py:23
+#: field:res.partner,member_membership:0
 #, python-format
 msgid "Memberships"
 msgstr "Jäsenyydet"
@@ -117,6 +118,11 @@ msgstr "Maksaneet asiakkaat"
 #: model:ir.model,name:membership_extension.model_res_partner
 msgid "Partner"
 msgstr "Kumppani"
+
+#. module: membership_extension
+#: field:membership.invoice,payment_term:0
+msgid "Payment term"
+msgstr "Maksuehto"
 
 #. module: membership_extension
 #: model:ir.model,name:membership_extension.model_product_template

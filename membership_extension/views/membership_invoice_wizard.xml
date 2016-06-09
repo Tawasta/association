@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record id="view_membership_invoice_view" model="ir.ui.view">
+			<field name="name">view.membership.invoice.view.payment.term</field>
+			<field name="model">membership.invoice</field>
+			<field name="inherit_id" ref="membership.view_membership_invoice_view" />
+			<field name="arch" type="xml">
+
+                <field name="member_price" position="after">
+                    <field name="payment_term" style="width: 30%%;" />
+                </field>
+
+			</field>
+		</record>
+
+	</data>
+</openerp>

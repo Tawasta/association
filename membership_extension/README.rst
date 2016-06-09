@@ -8,6 +8,10 @@ Membership extension
 
 This module was written to extend the functionality of membership module to keep track of members membership products.
 
+Features
+--------
+* Adds payment term to the membership invoice wizard
+
 Installation
 ============
 
