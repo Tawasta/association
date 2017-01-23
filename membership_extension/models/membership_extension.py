@@ -21,10 +21,39 @@ class MembershipModifications(models.Model):
 
     # 2. Fields declaration
     member_membership = fields.Char(_("Memberships"), compute='compute_member_membership')
+    member_lines_active = fields.One2many(
+        'membership.membership_line',
+        'partner',
+        string="Active memberships",
+        domain=lambda self: self._compute_member_lines_active_domain(),
+    )
+    member_lines_active_count = fields.Integer(
+        "Active memberships count",
+        compute='compute_member_lines_active_count',
+        store=True,
+        copy=False,
+    )
 
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
+    def _compute_member_lines_active_domain(self):
+        domain = [
+            ('membership_id.membership_date_from', '<=', fields.Date.today()),
+            ('membership_id.membership_date_to', '>=', fields.Date.today()),
+        ]
+
+        return domain
+
+    @api.multi
+    @api.depends('member_lines_active')
+    def compute_member_lines_active_count(self):
+        for record in self:
+            print record.member_lines_active
+            print len(record.member_lines_active)
+
+            record.member_lines_active_count = len(record.member_lines_active)
+
     @api.one
     def compute_member_membership(self):
 
