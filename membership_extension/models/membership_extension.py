@@ -32,7 +32,12 @@ class MembershipModifications(models.Model):
         states = dict(lines.fields_get(['state'])['state']['selection'])
         membership = ""
         state = ""
+        products = list()
+
         for i in range(0, len(lines)):
+            # Skip same products
+            if(lines[i].membership_id.id) in products:
+                continue
 
             membership += lines[i].membership_id.name + " ("
             state = lines[i].state if lines[i].state else "-"
@@ -40,6 +45,8 @@ class MembershipModifications(models.Model):
 
             if i + 1 < len(lines):
                 membership += "\n"
+
+            products.append(lines[i].membership_id.id)
 
         self.member_membership = membership
 
