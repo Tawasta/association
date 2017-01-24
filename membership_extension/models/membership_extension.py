@@ -49,9 +49,6 @@ class MembershipModifications(models.Model):
     @api.depends('member_lines_active')
     def compute_member_lines_active_count(self):
         for record in self:
-            print record.member_lines_active
-            print len(record.member_lines_active)
-
             record.member_lines_active_count = len(record.member_lines_active)
 
     @api.one
