@@ -182,8 +182,8 @@
             <field name="arch" type="xml">
 
             	<search string="Membership Partners">
-            		<filter string="Paid members" name="paid_members" domain="[('member_lines_active.state','=', 'paid')]" help="Paid Members"/>
-            		<filter string="Invoiced members" name="invoiced_members" domain="[('member_lines_active.state','=', 'invoiced')]" help="Invoiced Members"/>
+            		<filter string="Paid members" name="paid_members" domain="[('membership_state','=', 'paid')]" help="Paid Members"/>
+            		<filter string="Invoiced members" name="invoiced_members" domain="[('membership_state','=', 'invoiced')]" help="Invoiced Members"/>
             	</search>
             </field>
         </record>
