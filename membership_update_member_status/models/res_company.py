@@ -43,8 +43,6 @@ class ResCompany(models.Model):
             ('invoice_line.product_id.membership', '=', True),
         ])
 
-        print len(invoices)
-
         for invoice in invoices:
             # Go through all invoices that aren't in draft state
 
