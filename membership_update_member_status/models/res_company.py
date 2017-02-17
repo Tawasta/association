@@ -1,18 +1,20 @@
 # -*- coding: utf-8 -*-
 
 # 1. Standard library imports:
+import logging
 
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models
+from openerp.exceptions import ValidationError
 
 # 4. Imports from Odoo modules:
 
 # 5. Local imports in the relative form:
 
 # 6. Unknown third party imports:
-
+_logger = logging.getLogger()
 
 class ResCompany(models.Model):
     
@@ -36,7 +38,12 @@ class ResCompany(models.Model):
     def membership_update_member_status(self):
         # Updates partner membership lines from invoices
 
-        invoices = self.env['account.invoice'].search([('state', 'not in', ['draft'])])
+        invoices = self.env['account.invoice'].search([
+            ('state', 'not in', ['draft']),
+            ('invoice_line.product_id.membership', '=', True),
+        ])
+
+        print len(invoices)
 
         for invoice in invoices:
             # Go through all invoices that aren't in draft state
@@ -69,13 +76,16 @@ class ResCompany(models.Model):
                     'account_invoice_line': line.id,
                 }
 
-                membership_line = self.env['membership.membership_line'].create(values)
+                try:
+                    membership_line = self.env['membership.membership_line'].create(values)
+                except ValidationError, e:
+                    msg = "Did not update %s: %s" % (values, e)
+                    _logger.warning(msg)
 
                 partner = invoice.partner_id
                 membership_state = partner._get_membership_state()[partner.id]
 
                 membership_line.state = membership_state
-                #membership_line.write({'state': membership_state})
                 invoice.partner_id.membership_state = membership_state
 
 class ResPartner(models.Model):
