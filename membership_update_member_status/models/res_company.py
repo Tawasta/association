@@ -34,7 +34,7 @@ class ResCompany(models.Model):
     # 7. Action methods
 
     # 8. Business methods
-    @api.one
+    @api.model
     def membership_update_member_status(self):
         # Updates partner membership lines from invoices
 
