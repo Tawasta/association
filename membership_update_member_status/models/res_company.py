@@ -41,10 +41,15 @@ class ResCompany(models.Model):
         invoices = self.env['account.invoice'].search([
             ('state', 'not in', ['draft']),
             ('invoice_line.product_id.membership', '=', True),
+            ('partner_id.active', '=', True),
         ])
+
+        _logger.info("Found %s invoices" % len(invoices))
 
         for invoice in invoices:
             # Go through all invoices that aren't in draft state
+
+            partner = invoice.partner_id
 
             for line in invoice.invoice_line:
                 # Pass lines without membership products
@@ -65,7 +70,7 @@ class ResCompany(models.Model):
                 date_to = line.product_id.membership_date_to
 
                 values = {
-                    'partner': invoice.partner_id.id,
+                    'partner': partner.id,
                     'membership_id': line.product_id.id,
                     'member_price': line.price_unit,
                     'date': fields.Date.today(),
@@ -74,18 +79,18 @@ class ResCompany(models.Model):
                     'account_invoice_line': line.id,
                 }
 
-                partner = invoice.partner_id
-                membership_state = partner._get_membership_state()[partner.id]
-
                 try:
                     membership_line = self.env['membership.membership_line'].create(values)
-                    membership_line.state = membership_state
 
                 except ValidationError, e:
                     msg = "Did not update %s: %s" % (values, e)
                     _logger.warning(msg)
 
-                invoice.partner_id.membership_state = membership_state
+            membership_state = partner._get_membership_state()[partner.id]
+            msg = "Updating partner %s to state %s" % (partner.name, membership_state)
+            _logger.info(msg)
+            invoice.partner_id.membership_state = membership_state
+
 
 class ResPartner(models.Model):
 
