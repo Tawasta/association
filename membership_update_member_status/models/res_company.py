@@ -74,16 +74,17 @@ class ResCompany(models.Model):
                     'account_invoice_line': line.id,
                 }
 
+                partner = invoice.partner_id
+                membership_state = partner._get_membership_state()[partner.id]
+
                 try:
                     membership_line = self.env['membership.membership_line'].create(values)
+                    membership_line.state = membership_state
+
                 except ValidationError, e:
                     msg = "Did not update %s: %s" % (values, e)
                     _logger.warning(msg)
 
-                partner = invoice.partner_id
-                membership_state = partner._get_membership_state()[partner.id]
-
-                membership_line.state = membership_state
                 invoice.partner_id.membership_state = membership_state
 
 class ResPartner(models.Model):
