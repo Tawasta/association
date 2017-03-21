@@ -18,10 +18,11 @@ class ResPartnerAssociationType(models.Model):
 
     # 1. Private attributes
     _name = 'res.partner.association.type'
-    _order = 'name'
+    _order = 'sequence'
 
     # 2. Fields declaration
-    name = fields.Char()
+    name = fields.Char("Name")
+    sequence = fields.Integer("Sequence")
 
     # 3. Default methods
 
