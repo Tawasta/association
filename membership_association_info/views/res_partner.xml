@@ -24,11 +24,22 @@
                                 <field name="association_date_join" />
                             </group>
 
-                            <label for="association_members" colspan="2"/>
+                            <label for="association_members" colspan="2" />
                             <field name="association_members" nolabel="1" colspan="2">
                                 <tree editable="top/bottom">
+                                    <field name="year" />
                                     <field name="name" />
                                     <field name="amount" sum="Total" />
+                                    <field name="write_date" readonly="1"/>
+                                </tree>
+                            </field>
+
+                            <label for="association_members_history" colspan="2" />
+                            <field name="association_members_history" nolabel="1" colspan="2">
+                                <tree editable="top/bottom">
+                                    <field name="year" />
+                                    <field name="name" />
+                                    <field name="amount" />
                                     <field name="write_date" readonly="1"/>
                                 </tree>
                             </field>
