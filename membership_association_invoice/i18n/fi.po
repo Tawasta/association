@@ -1,0 +1,208 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* membership_association_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-24 11:50+0000\n"
+"PO-Revision-Date: 2017-05-24 14:53+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,account_id:0
+msgid "Account"
+msgstr "Tilin nimi"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,price_subtotal:0
+msgid "Amount"
+msgstr "Määrä"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,account_analytic_id:0
+msgid "Analytic Account"
+msgstr "Analyyttinen tili"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,account_invoice_line_id:0
+msgid "Automatically created field to link to parent account.invoice.line"
+msgstr "Automatically created field to link to parent account.invoice.line"
+
+#. module: membership_association_invoice
+#: view:membership.association.invoice:membership_association_invoice.membership_association_wizard_form
+msgid "Cancel"
+msgstr "Peru"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,company_id:0
+msgid "Company"
+msgstr "Yritys"
+
+#. module: membership_association_invoice
+#: field:res.partner,address_contact_ids:0
+msgid "Contact"
+msgstr "Yhteyshenkilö"
+
+#. module: membership_association_invoice
+#: view:membership.association.invoice:membership_association_invoice.membership_association_wizard_form
+msgid "Create invoice"
+msgstr "Luo lasku"
+
+#. module: membership_association_invoice
+#: view:membership.association.invoice:membership_association_invoice.membership_association_wizard_form
+#: view:res.partner:membership_association_invoice.view_partner_form
+msgid "Create membership invoice"
+msgstr "Luo jäsenlasku"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,create_uid:0
+#: field:membership.association.invoice,create_uid:0
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,create_date:0
+#: field:membership.association.invoice,create_date:0
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,name:0
+msgid "Description"
+msgstr "Kuvaus"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,discount:0
+msgid "Discount (%)"
+msgstr "Alennus (%)"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,display_name:0
+#: field:membership.association.invoice,display_name:0
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: membership_association_invoice
+#: help:account.invoice.line.transient,sequence:0
+msgid "Gives the sequence of this line when displaying the invoice."
+msgstr "Gives the sequence of this line when displaying the invoice."
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,id:0
+#: field:membership.association.invoice,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: membership_association_invoice
+#: view:membership.association.invoice:membership_association_invoice.membership_association_wizard_form
+msgid "Invoice Lines"
+msgstr "Laskurivit"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,invoice_id:0
+msgid "Invoice Reference"
+msgstr "Laskuviite"
+
+#. module: membership_association_invoice
+#: field:membership.association.invoice,invoice_lines:0
+msgid "Invoice lines"
+msgstr "Laskurivit"
+
+#. module: membership_association_invoice
+#: model:ir.actions.act_window,name:membership_association_invoice.act_account_invoice_mass_create
+msgid "Invoice memberships"
+msgstr "Laskuta jäsenyydet"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,__last_update:0
+#: field:membership.association.invoice,__last_update:0
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,write_uid:0
+#: field:membership.association.invoice,write_uid:0
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,write_date:0
+#: field:membership.association.invoice,write_date:0
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,partner_id:0
+#: model:ir.model,name:membership_association_invoice.model_res_partner
+#: field:membership.association.invoice,partner:0
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,product_id:0
+msgid "Product"
+msgstr "Tuote"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,quantity:0
+msgid "Quantity"
+msgstr "Määrä"
+
+#. module: membership_association_invoice
+#: help:account.invoice.line.transient,origin:0
+msgid "Reference of the document that produced this invoice."
+msgstr "Reference of the document that produced this invoice."
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,sequence:0
+msgid "Sequence"
+msgstr "Sequence"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,origin:0
+msgid "Source Document"
+msgstr "Lähdedokumentti"
+
+#. module: membership_association_invoice
+#: view:membership.association.invoice:membership_association_invoice.membership_association_wizard_form
+msgid "Subtotal"
+msgstr "Välisumma"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,invoice_line_tax_id:0
+msgid "Taxes"
+msgstr "Verot:"
+
+#. module: membership_association_invoice
+#: help:account.invoice.line.transient,account_id:0
+msgid "The income or expense account related to the selected product."
+msgstr "The income or expense account related to the selected product."
+
+#. module: membership_association_invoice
+#: field:membership.association.invoice,uuid:0
+msgid "UUID"
+msgstr "UUID"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,price_unit:0
+msgid "Unit Price"
+msgstr "Yksikköhinta"
+
+#. module: membership_association_invoice
+#: field:account.invoice.line.transient,uos_id:0
+msgid "Unit of Measure"
+msgstr "Mittayksikkö"
+
+#. module: membership_association_invoice
+#: view:membership.association.invoice:membership_association_invoice.membership_association_wizard_form
+msgid "or"
+msgstr "tai"

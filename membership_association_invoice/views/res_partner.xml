@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<act_window id="act_account_invoice_mass_create"
+		    name="Invoice memberships"
+		    multi="True"
+		    res_model="membership.association.invoice"
+		    src_model="res.partner"
+		    key2="client_action_multi"
+		    view_mode="form"
+		    view_type="form"
+		    target="new"
+		    />
+
+		<record id="view_partner_form" model="ir.ui.view">
+			<field name="name">view.partner.form.association.info.invoice</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="membership_association_info.view_partner_form" />
+			<field name="arch" type="xml">
+
+				<label for="association_members" position="before">
+                    <button
+                        type="action"
+                        name="%(act_account_invoice_mass_create)d"
+                        string="Create membership invoice" />
+				</label>
+
+			</field>
+		</record> 
+
+	</data>
+</openerp>
