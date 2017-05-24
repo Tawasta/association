@@ -65,8 +65,10 @@ class ResPartner(models.Model):
         for record in self:
             for line in record.association_members:
                 existing = record.env['res.partner.association.members'].search([
+                    ('partner', '=', line.partner.id),
                     ('year', '=', line.year.id),
                     ('name', '=', line.name.id),
+                    ('id', '!=', line.id),
                 ], limit=1)
 
                 if existing:

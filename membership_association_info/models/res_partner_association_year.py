@@ -21,7 +21,7 @@ class ResPartnerAssociationYear(models.Model):
 
     # 1. Private attributes
     _name = 'res.partner.association.year'
-    _order = 'name'
+    _order = 'name DESC'
 
     # 2. Fields declaration
     name = fields.Char("Year")
