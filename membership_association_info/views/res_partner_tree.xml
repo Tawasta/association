@@ -9,6 +9,7 @@
 			<field name="arch" type="xml">
        	   		<tree string="Associations">
                     <field name='display_name' />
+                    <field name='association_status' />
                		<field name='category_id' />
                		<field name='association_members_string' />
               	</tree>
