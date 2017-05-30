@@ -2,7 +2,7 @@
 <openerp>
 	<data>
 
-		<act_window id="act_account_invoice_mass_create"
+		<act_window id="act_association_invoice_create"
 		    name="Invoice memberships"
 		    multi="True"
 		    res_model="membership.association.invoice"
@@ -22,7 +22,7 @@
 				<label for="association_members" position="before">
                     <button
                         type="action"
-                        name="%(act_account_invoice_mass_create)d"
+                        name="%(act_association_invoice_create)d"
                         string="Create membership invoice" />
 				</label>
 

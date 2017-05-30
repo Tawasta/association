@@ -22,7 +22,7 @@
 {
     'name': 'Membership association invoice',
     'summary': 'Create invoices from association partners',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.0.1',
     'category': 'Association',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -37,6 +37,7 @@
         'account',
         'account_invoice_mass_create',
         'membership_association_info',
+        'product',
     ],
     'data': [
         'views/membership_association_invoice_wizard.xml',
