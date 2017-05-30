@@ -54,16 +54,16 @@ class MembershipAssociationInvoice(models.TransientModel):
     # 6. CRUD methods
 
     # 7. Action methods
-    '''
     @api.multi
     def action_create_membership_invoice(self):
         res = self.env['account.invoice.mass.create'].mass_create_invoices()
 
+        '''
         if 'invoices' in res:
             for association_member in self.partner.association_members:
                 association_member.invoice = res['invoices'][self.partner.id]
+        '''
 
         return res
-    '''
 
     # 8. Business methods
