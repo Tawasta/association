@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record id="partner_association_tree_view" model="ir.ui.view">
+			<field name="name">association__tree_view</field>
+			<field name="model">res.partner</field>
+			<field eval="30" name="priority"/>
+			<field name="arch" type="xml">
+       	   		<tree string="Associations">
+                    <field name='display_name' />
+               		<field name='category_id' />
+               		<field name='association_members_string' />
+              	</tree>
+
+			</field>
+		</record> 
+
+	</data>
+</openerp>

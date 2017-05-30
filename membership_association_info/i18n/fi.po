@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-19 09:23+0000\n"
-"PO-Revision-Date: 2017-05-19 12:24+0300\n"
+"POT-Creation-Date: 2017-05-30 10:43+0000\n"
+"PO-Revision-Date: 2017-05-30 13:45+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -38,9 +38,21 @@ msgid "Association info"
 msgstr "Yhdistyksen tiedot"
 
 #. module: membership_association_info
+#: model:ir.actions.act_window,name:membership_association_info.action_associations_tree
+#: model:ir.ui.menu,name:membership_association_info.menuitem_partner_association_tree
+#: view:res.partner:membership_association_info.partner_association_tree_view
+msgid "Associations"
+msgstr "Yhdistykset"
+
+#. module: membership_association_info
 #: field:res.partner,association_category:0
 msgid "Category"
 msgstr "Kategoria"
+
+#. module: membership_association_info
+#: field:res.partner,address_contact_ids:0
+msgid "Contact"
+msgstr "Yhteyshenkilö"
 
 #. module: membership_association_info
 #: field:res.partner.association.category,create_uid:0
@@ -119,7 +131,7 @@ msgid "Partner"
 msgstr "Kumppani"
 
 #. module: membership_association_info
-#: code:addons/membership_association_info/models/res_partner.py:74
+#: code:addons/membership_association_info/models/res_partner.py:87
 #, python-format
 msgid "Please don't create overlapping records: %s"
 msgstr "Ethän tee päällekkäisiä tietueita: %s"

@@ -22,7 +22,7 @@
 {
     'name': 'Partner association info',
     'summary': 'Extra info for association-type partners',
-    'version': '8.0.0.4.0',
+    'version': '8.0.0.5.0',
     'category': 'Association',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -37,7 +37,10 @@
         'base',
     ],
     'data': [
-        'views/res_partner.xml',
+        'views/res_partner_form.xml',
+        'views/res_partner_tree.xml',
+
+        'views/res_partner_menu.xml',
 
         'security/ir.model.access.csv',
     ],

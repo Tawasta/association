@@ -44,6 +44,12 @@ class ResPartner(models.Model):
         'Members',
         domain=[('year.name', '=', datetime.today().year)],
     )
+
+    association_members_string = fields.Char(
+        string='Members',
+        compute='compute_association_members_string',
+    )
+
     association_members_history = fields.One2many(
         'res.partner.association.members',
         'partner',
@@ -54,6 +60,11 @@ class ResPartner(models.Model):
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
+    @api.multi
+    def compute_association_members_string(self):
+        for record in self:
+            record.association_members_string = \
+                '\n'.join(["%s - %s" % (member.name.name, member.amount) for member in record.association_members])
 
     # 5. Constraints and onchanges
     @api.onchange('association_status')
