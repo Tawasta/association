@@ -16,6 +16,7 @@ from openerp.exceptions import ValidationError
 # 6. Unknown third party imports:
 _logger = logging.getLogger()
 
+
 class ResCompany(models.Model):
     
     # 1. Private attributes
@@ -86,10 +87,11 @@ class ResCompany(models.Model):
                     msg = "Did not update %s: %s" % (values, e)
                     _logger.warning(msg)
 
-            membership_state = partner._get_membership_state()[partner.id]
-            msg = "Updating partner %s to state %s" % (partner.name, membership_state)
-            _logger.info(msg)
-            invoice.partner_id.membership_state = membership_state
+            if invoice.partner_id.membership_state != membership_state:
+                membership_state = partner._get_membership_state()[partner.id]
+                msg = "Updating partner %s to state %s" % (partner.name, membership_state)
+                _logger.info(msg)
+                invoice.partner_id.membership_state = membership_state
 
 
 class ResPartner(models.Model):
