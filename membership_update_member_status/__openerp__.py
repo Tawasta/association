@@ -22,7 +22,7 @@
 {
     'name': 'Membership Update Member Status',
     'summary': 'Manually updates membership status',
-    'version': '8.0.0.5.1',
+    'version': '8.0.0.5.2',
     'category': 'Association',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

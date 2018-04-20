@@ -47,6 +47,7 @@ class ResCompany(models.Model):
 
         _logger.info("Found %s invoices" % len(invoices))
 
+        membership_state = False
         for invoice in invoices:
             # Go through all invoices that aren't in draft state
 
